@@ -34,17 +34,17 @@ namespace Demo {
 						SecondNumText = secondText;
 					firstNum = Convert.ToDouble(firstNumText);
 					secondNum = Convert.ToDouble(SecondNumText);
-                    switch(op) {
+                   		        switch(op) {
 						case '+': result=firstNum + secondNum; break;
 						case '-': result = firstNum - secondNum; break;
 						case '*': result = firstNum * secondNum; break;
 						case '/': result = firstNum / secondNum; break;
 						default : result = 0; break;
-                    }
+                  		        }
 					if (replacedStrFirst.LastIndexOf("$") != -1)
 						remFirstStr=firstText.Substring(0, replacedStrFirst.LastIndexOf("$"));
-                    if (replacedStrSecond.IndexOf("$") != -1)
-                        remSecStr=secondText.Substring(replacedStrSecond.IndexOf("$"), replacedStrSecond.Length - replacedStrSecond.IndexOf("$"));
+                   		        if (replacedStrSecond.IndexOf("$") != -1)
+                       				 remSecStr=secondText.Substring(replacedStrSecond.IndexOf("$"), replacedStrSecond.Length - replacedStrSecond.IndexOf("$"));
 					if (op == '+' || op == '-'){
 						if (result < 0)
 							str = remFirstStr + result + remSecStr;
